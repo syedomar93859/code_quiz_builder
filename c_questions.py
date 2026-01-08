@@ -206,9 +206,221 @@ def c_question_4(tries):
             else:
                 print("You only have " + str(tries - i - 1) + " tries left.")
 
+
+def c_question_5(tries):
+    global correct_answers
+    print("Programming Language: C")
+    print("What is the index of the first element in a C array?")
+
+    firstChoice = "0"
+    secondChoice = "1"
+    thirdChoice = "-1"
+    fourthChoice = "Depends on the compiler"
+
+    choices = [firstChoice, secondChoice, thirdChoice, fourthChoice]
+    random.shuffle(choices)
+
+    print("\n1. " + choices[0])
+    print("2. " + choices[1])
+    print("3. " + choices[2])
+    print("4. " + choices[3])
+
+    foundIndex = choices.index(firstChoice) + 1
+
+    for i in range(tries):
+        answer = input()
+        if answer.isdigit() and int(answer) == foundIndex:
+            print("Success!")
+            correct_answers += 1
+            break
+        else:
+            if tries - i == 1:
+                print("Failure!")
+                print("Correct Answer:", firstChoice)
+            else:
+                print("You only have", tries - i - 1, "tries left.")
+
+def c_question_6(tries):
+    global correct_answers
+    print("Programming Language: C")
+    print("Which loop is guaranteed to execute at least once?")
+
+    firstChoice = "do-while loop"
+    secondChoice = "while loop"
+    thirdChoice = "for loop"
+    fourthChoice = "if statement"
+
+    choices = [firstChoice, secondChoice, thirdChoice, fourthChoice]
+    random.shuffle(choices)
+
+    print("\n1. " + choices[0])
+    print("2. " + choices[1])
+    print("3. " + choices[2])
+    print("4. " + choices[3])
+
+    foundIndex = choices.index(firstChoice) + 1
+
+    for i in range(tries):
+        answer = input()
+        if answer.isdigit() and int(answer) == foundIndex:
+            print("Success!")
+            correct_answers += 1
+            break
+        else:
+            if tries - i == 1:
+                print("Failure!")
+                print("Correct Answer:", firstChoice)
+            else:
+                print("You only have", tries - i - 1, "tries left.")
+
+def c_question_7(tries):
+    global correct_answers
+    print("Programming Language: C")
+    print("What does sizeof(int) return?")
+
+    firstChoice = "Number of bytes used by an int"
+    secondChoice = "Number of bits used by an int"
+    thirdChoice = "Always 4"
+    fourthChoice = "The value stored in an int"
+
+    choices = [firstChoice, secondChoice, thirdChoice, fourthChoice]
+    random.shuffle(choices)
+
+    print("\n1. " + choices[0])
+    print("2. " + choices[1])
+    print("3. " + choices[2])
+    print("4. " + choices[3])
+
+    foundIndex = choices.index(firstChoice) + 1
+
+    for i in range(tries):
+        answer = input()
+        if answer.isdigit() and int(answer) == foundIndex:
+            print("Success!")
+            correct_answers += 1
+            break
+        else:
+            if tries - i == 1:
+                print("Failure!")
+                print("Correct Answer:", firstChoice)
+            else:
+                print("You only have", tries - i - 1, "tries left.")
+
+def c_question_8(tries):
+    global correct_answers
+    print("Programming Language: C")
+    print("Which keyword is used to define a structure in C?")
+
+    firstChoice = "struct"
+    secondChoice = "class"
+    thirdChoice = "object"
+    fourthChoice = "record"
+
+    choices = [firstChoice, secondChoice, thirdChoice, fourthChoice]
+    random.shuffle(choices)
+
+    print("\n1. " + choices[0])
+    print("2. " + choices[1])
+    print("3. " + choices[2])
+    print("4. " + choices[3])
+
+    foundIndex = choices.index(firstChoice) + 1
+
+    for i in range(tries):
+        answer = input()
+        if answer.isdigit() and int(answer) == foundIndex:
+            print("Success!")
+            correct_answers += 1
+            break
+        else:
+            if tries - i == 1:
+                print("Failure!")
+                print("Correct Answer:", firstChoice)
+            else:
+                print("You only have", tries - i - 1, "tries left.")
+
+def c_question_9(tries):
+    global correct_answers
+    print("Programming Language: C")
+    print("Which function is used to dynamically allocate memory?")
+
+    firstChoice = "malloc()"
+    secondChoice = "alloc()"
+    thirdChoice = "new"
+    fourthChoice = "memalloc()"
+
+    choices = [firstChoice, secondChoice, thirdChoice, fourthChoice]
+    random.shuffle(choices)
+
+    print("\n1. " + choices[0])
+    print("2. " + choices[1])
+    print("3. " + choices[2])
+    print("4. " + choices[3])
+
+    foundIndex = choices.index(firstChoice) + 1
+
+    for i in range(tries):
+        answer = input()
+        if answer.isdigit() and int(answer) == foundIndex:
+            print("Success!")
+            correct_answers += 1
+            break
+        else:
+            if tries - i == 1:
+                print("Failure!")
+                print("Correct Answer:", firstChoice)
+            else:
+                print("You only have", tries - i - 1, "tries left.")
+
+def c_question_10(tries):
+    global correct_answers
+    print("Programming Language: C")
+    print("What keyword is used to prevent fall-through in a switch statement?")
+
+    firstChoice = "break"
+    secondChoice = "continue"
+    thirdChoice = "return"
+    fourthChoice = "stop"
+
+    choices = [firstChoice, secondChoice, thirdChoice, fourthChoice]
+    random.shuffle(choices)
+
+    print("\n1. " + choices[0])
+    print("2. " + choices[1])
+    print("3. " + choices[2])
+    print("4. " + choices[3])
+
+    foundIndex = choices.index(firstChoice) + 1
+
+    for i in range(tries):
+        answer = input()
+        if answer.isdigit() and int(answer) == foundIndex:
+            print("Success!")
+            correct_answers += 1
+            break
+        else:
+            if tries - i == 1:
+                print("Failure!")
+                print("Correct Answer:", firstChoice)
+            else:
+                print("You only have", tries - i - 1, "tries left.")
+
+
 def total_correct():
     return correct_answers
 
 
 def send_c_questions():
-    return [c_question_1, c_question_2, c_question_3]
+    return [
+        C_question_1,
+        c_question_2,
+        c_question_3,
+        c_question_4,
+        c_question_5,
+        c_question_6,
+        c_question_7,
+        c_question_8,
+        c_question_9,
+        c_question_10
+    ]
+
