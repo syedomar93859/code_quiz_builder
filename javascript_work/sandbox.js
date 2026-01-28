@@ -1,3 +1,5 @@
+const userInput = prompt("Please enter your name:");
+
 const python_question_generator = function(question_type, tries, question, answer){
     console.log(`Programming Language: Python`);
     if (question_type == 'multiple_choice'){
