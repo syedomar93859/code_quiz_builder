@@ -9,3 +9,8 @@
     color: limegreen;
     border: 1px dotted limegreen;
 }
+
+button.active {
+    background-color: #4caf50;
+    color: white;
+}

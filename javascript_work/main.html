@@ -9,13 +9,17 @@
 <body>
     <h1>Quiz Creator For Programming Practice</h1>
     <p>This is a tool to help you create quizzes for programming practice.</p>
-    <p>How to print "Hello World!" in python?</p>
 
-    <input type="text" id="myText" placeholder="Some text...">
+    <button onclick="toggleLanguage(this)" data-language="Python">Python</button>
+    <button onclick="toggleLanguage(this)" data-language="Java">Java</button>
+    <button onclick="toggleLanguage(this)" data-language="C">C</button>
 
-    <button onclick="myFunction()">Try it</button>
+
+    <!-- <input type="text" id="myText" placeholder="Some text..."> -->
+
+    <button onclick="quizCreator()">Create Quiz</button>
     
 
-    <script src="sandbox.js"></script>
+    <script type="module" src="sandbox.js"></script>
 </body>
 </html>

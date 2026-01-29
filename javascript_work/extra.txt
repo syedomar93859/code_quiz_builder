@@ -1,0 +1,37 @@
+// const userInput = prompt("Please enter your name:");
+
+// const python_question_1 = function(){
+//     console.log("What is the output of the following code?");
+//     console.log("print(2 ** 3)");
+//     console.log("a) 8");
+//     console.log("b) 9");
+//     console.log("c) 6");
+//     console.log("d) Error");
+// };
+
+
+// python_question_1();
+
+
+// const password = 'p@ss12';
+
+// if (password.length >= 12 && password.includes('@')) {
+//     console.log('that password is mighty strong!');
+// } else if (password.length >= 8 || password.includes('@') && password.length >=  5 ) {
+//     console.log('that password is strong enough!');
+// } else {
+//     console.log('password is not strong enough!');
+// }
+
+// function myFunction() {
+//     const inputElement = document.getElementById("myText");
+//     const userAnswer = inputElement.value;
+
+//     if (userAnswer.toLowerCase() === "print('hello world!')" || userAnswer.toLowerCase() === 'print("hello world!")') {
+//         console.log("Correct!");
+//     } else {
+//         console.log("Incorrect. Please try again.");
+//     }
+
+//     console.log("User entered:", userAnswer);
+// }
