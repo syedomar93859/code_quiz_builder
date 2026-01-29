@@ -1,12 +1,12 @@
 let python_question_1 = {
     language: 'Python',
     type: 'Written Choice',
-    question: 'What is the output of the following code?\nprint(2 ** 3)',
-    answer: '8',
+    question: 'How to print "Hello, World!" in Python?',
+    answer: 'print("Hello, World!")',
 };
 
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
-    return python_question_1
+    return python_question_1;
 };
 
