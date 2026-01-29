@@ -49,9 +49,11 @@ function quizCreator() {
     content.innerHTML = ''; // Clear previous content
 
     quizQuestions.forEach(q => {
+        // let currTries = tries;
+
         const question = document.createElement('p');
-        question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}`;
-        
+        question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${tries}`;
+
         const answerInput = document.createElement('input');
         answerInput.type = 'text';
         answerInput.placeholder = 'Enter your answer...';
@@ -62,14 +64,35 @@ function quizCreator() {
 
         const submitButton = document.createElement('button');
         submitButton.innerHTML = 'Submit';
+        
         submitButton.onclick = () => {
             const userAnswer = answerInput.value;
             if (userAnswer === q.answer) {
                 alert('Correct!');
+                submitButton.disabled = true;
+
+                const solution = document.createElement('p');
+                solution.innerHTML = `Solution: ${q.answer}`;
+                content.appendChild(solution);
+
             } else {
-                alert(`Incorrect! The correct answer is: ${q.answer}`);
+                alert(`Incorrect!`);
             }
         };
+
+
+        // for (let i = 0; i < totalTries; i++) {
+        //     console.log(i);
+        //     submitButton.onclick = () => {
+        //         const userAnswer = answerInput.value;
+        //         if (userAnswer === q.answer) {
+        //             alert('Correct!');
+        //         } else {
+        //             alert(`Incorrect! The correct answer is: ${q.answer}`);
+        //             question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - i}`;
+        //         }
+        //     };
+        // }
 
         content.appendChild(submitButton);
     });
