@@ -49,10 +49,11 @@ function quizCreator() {
     content.innerHTML = ''; // Clear previous content
 
     quizQuestions.forEach(q => {
-        // let currTries = tries;
+        const totalTries = tries;
+        let currTries = 0;
 
         const question = document.createElement('p');
-        question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${tries}`;
+        question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
 
         const answerInput = document.createElement('input');
         answerInput.type = 'text';
@@ -75,8 +76,15 @@ function quizCreator() {
                 solution.innerHTML = `Solution: ${q.answer}`;
                 content.appendChild(solution);
 
-            } else {
+            } else if(totalTries === currTries + 1){
+                alert(`Out of tries!`);
+                question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: 0`;
+                submitButton.disabled = true;
+            }else {
                 alert(`Incorrect!`);
+                currTries++;
+                console.log(currTries);
+                question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
             }
         };
 
