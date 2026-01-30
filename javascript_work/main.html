@@ -7,27 +7,33 @@
     <title>Code Quiz Creator</title>
 </head>
 <body>
+  <div class="page">
     <h1>Quiz Creator For Programming Practice</h1>
     <p>This is a tool to help you create quizzes for programming practice.</p>
 
     <div class="language-selection">
-        <button onclick="toggleLanguage(this)" data-language="Python">Python</button>
-        <button onclick="toggleLanguage(this)" data-language="Java">Java</button>
-        <button onclick="toggleLanguage(this)" data-language="C">C</button>
+      <button onclick="toggleLanguage(this)" data-language="Python">Python</button>
+      <button onclick="toggleLanguage(this)" data-language="Java">Java</button>
+      <button onclick="toggleLanguage(this)" data-language="C">C</button>
     </div>
 
-    <p>How many tries per question?</p>
+    <div class="section">
+      <div class="controls">
+        <div class="tries-selection">
+          <label class="label" for="myText">How many tries per question?</label>
+          <input type="number" id="myText" min="1" max="10" step="1" value="3">
+        </div>
 
-    <div class="tries-selection">
-        <input type="text" id="myText" placeholder="Some text...">
-    </div>
-
-    <div class="quiz-creation">
-        <button onclick="quizCreator()">Create Quiz</button>
+        <div class="quiz-creation">
+          <button onclick="quizCreator()">Create Quiz</button>
+        </div>
+      </div>
     </div>
 
     <div class="quiz"></div>
 
     <script type="module" src="sandbox.js"></script>
+  </div>
 </body>
+
 </html>
