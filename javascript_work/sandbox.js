@@ -67,7 +67,7 @@ function quizCreator() {
         const question = document.createElement('p');
         if (q.type === 'Multiple Choice'){
              question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${q.options.join('<br>')} <br> Tries Left: ${totalTries - currTries}`;
-        } else if (q.type === 'Written Choice') {
+        } else if (q.type === 'Written') {
             question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
         }
 
@@ -91,7 +91,7 @@ function quizCreator() {
                 const solution = document.createElement('p');
                 if (q.type === 'Multiple Choice'){
                     solution.innerHTML = `Solution: ${q.solution}`;
-                } else if (q.type === 'Written Choice') {
+                } else if (q.type === 'Written') {
                     solution.innerHTML = `Solution: ${q.answer}`;
                 }
 
@@ -102,7 +102,7 @@ function quizCreator() {
 
                 if (q.type === 'Multiple Choice'){
                     question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${q.options.join('<br>')} <br> Tries Left: 0`;
-                } else if (q.type === 'Written Choice') {
+                } else if (q.type === 'Written') {
                     question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: 0`;
                 }
 
@@ -112,7 +112,7 @@ function quizCreator() {
 
                 if (q.type === 'Multiple Choice'){
                     solution.innerHTML = `Solution: ${q.solution}`;
-                } else if (q.type === 'Written Choice') {
+                } else if (q.type === 'Written') {
                     solution.innerHTML = `Solution: ${q.answer}`;
                 }
 
@@ -126,7 +126,7 @@ function quizCreator() {
 
                 if (q.type === 'Multiple Choice'){
                     question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${q.options.join('<br>')} <br> Tries Left: ${totalTries - currTries}`;
-                } else if (q.type === 'Written Choice') {
+                } else if (q.type === 'Written') {
                     question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
                 }
 

@@ -1,6 +1,6 @@
 let python_question_1 = {
     language: 'Python',
-    type: 'Written Choice',
+    type: 'Written',
     question: 'How to print "Hello, World!" in Python?',
     answer: 'print("Hello, World!")',
 };

@@ -1,6 +1,6 @@
 let java_question_1 = {
     language: 'Java',
-    type: 'Written Choice',
+    type: 'Written',
     question: 'How to print "Hello, World!" in Java?',
     answer: 'System.out.println("Hello, World!");',
 };

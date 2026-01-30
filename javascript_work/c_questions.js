@@ -1,6 +1,6 @@
 let c_question_1 = {
     language: 'C',
-    type: 'Written Choice',
+    type: 'Written',
     question: 'How to print "Hello, World!" in C?',
     answer: 'printf("Hello, World!");',
 };
