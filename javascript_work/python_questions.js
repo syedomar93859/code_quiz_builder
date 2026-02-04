@@ -43,9 +43,30 @@ let python_question_4 = {
     
 };
 
+let python_question_5 = {
+    language: 'Python',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'What does the float(3) function do in Python?',
+    options: [
+        'Converts 3 to a float',
+        'Rounds 3 to the nearest integer',
+        'Returns an error',
+    ],
+    solution: 'Converts 3 to a float',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+    
+};
+
+
 
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
-    return [python_question_1, python_question_2, python_question_3, python_question_4];
+    return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5];
 };
 

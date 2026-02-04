@@ -6,6 +6,7 @@ const selectedLanguages = new Set();
 
 const quizQuestions = new Set();
 
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -77,6 +78,12 @@ function quizCreator() {
     const content = document.querySelector('.quiz');
     content.innerHTML = ''; // Clear previous content
 
+    let fullMarks = finalQuestions.length;
+    console.log(`Total Questions: ${finalQuestions.length}`);
+
+    let questionsAnswered = 0;
+    const totalNumQuestions = finalQuestions.length;
+
     finalQuestions.forEach(q => {
         let letteredChoices = [];
         const totalTries = tries;
@@ -118,6 +125,7 @@ function quizCreator() {
         submitButton.innerHTML = 'Submit';
         
         submitButton.onclick = () => {
+            let mark = 0;
             const userAnswer = answerInput.value;
             if (userAnswer === q.answer || userAnswer === correctChoice) {
                 alert('Correct!');
@@ -141,6 +149,7 @@ function quizCreator() {
                 submitButton.insertAdjacentElement('afterend', solution);
 
             } else if(totalTries === currTries + 1){
+                fullMarks -= (1/totalTries);
                 alert(`Out of tries!`);
 
                 if (q.type === 'Multiple Choice'){
@@ -163,6 +172,7 @@ function quizCreator() {
 
 
             } else {
+                fullMarks -= (1/totalTries);
                 alert(`Incorrect!`);
                 currTries++;
                 console.log(currTries);
@@ -174,10 +184,28 @@ function quizCreator() {
                 }
 
             }
+
+
+            if (submitButton.disabled) { // A button only disables when a question is "done"
+        questionsAnswered++;
+
+        if (questionsAnswered === totalNumQuestions) {
+            const score = document.createElement('h2');
+            score.style.marginTop = "20px";
+            score.innerHTML = `🏁 Quiz Complete! Final Score: ${fullMarks.toFixed(2)} / ${totalNumQuestions.toFixed(2)}`;
+            content.appendChild(score);
+        }
+    }
+
+
+            console.log(fullMarks.toFixed(2));
         };
 
         content.appendChild(submitButton);
+
+        
     });
+    console.log(fullMarks.toFixed(2));
 }
 
 window.toggleLanguage = toggleLanguage;
