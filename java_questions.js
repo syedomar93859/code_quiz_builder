@@ -2,7 +2,7 @@ let java_question_1 = {
     language: 'Java',
     type: 'Written',
     difficulty: 'Easy',
-    question: 'How to print "Hello, World!"',
+    question: 'How to print "Hello, World!" in Java?',
     answer: 'System.out.println("Hello, World!");',
 };
 
@@ -10,7 +10,7 @@ let java_question_2 = {
     language: 'Java',
     type: 'Multiple Choice',
     difficulty: 'Easy',
-    question: 'What does the "void" keyword indicate?',
+    question: 'What does the "void" keyword indicate in Java?',
     options: [
         'It indicates that a method does not return a value.',
         'It indicates that a method returns a value.',
@@ -31,7 +31,7 @@ let java_question_3 = {
     language: 'Java',
     type: 'Multiple Choice',
     difficulty: 'Easy',
-    question: 'What does the static keyword mean for a method?',
+    question: 'What does the static keyword mean for a method in Java?',
     options: [
         'It means the method can be accessed without creating an instance/object of the class.',
         'It means the method cannot be accessed without creating an instance/object of the class.',

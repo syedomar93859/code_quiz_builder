@@ -9,6 +9,7 @@ Add difficulty for each question
 rename this project because code_practice is not a good name
 questions with multiple answers
 select multiple options quetion
+better messages when getting wrong answer
 
 create question about *p being a pointer in c
 explain address in c like &x which is the address of variable x when it was intialized before
