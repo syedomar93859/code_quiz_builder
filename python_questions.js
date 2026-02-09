@@ -103,10 +103,44 @@ let python_question_7 = {
     },
 };
 
+let python_question_8 = {
+    language: 'Python',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'Which of the following is a legal variable name?',
+    options: [
+        '5coolbird = "Scott"' ,
+        'cool-bird = "Scott"',
+        'cool bird = "Scott"',
+        'coolBird = "Scott"', // camelCase option
+        // 'cool_bird = "Scott"', 
+
+    ],
+    solution: 'coolBird = "Scott"',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
+let python_question_9 = {
+    language: 'Python',
+    type: 'Written',
+    difficulty: 'Easy',
+    question: 'How would you assign 2 values to 2 variables in one line? Make x have the value of 9 and y have the value of 13.',
+    answer: 'x, y = 9, 13',
+};
+
+
+
+
 
 
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
-    return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5, python_question_6, python_question_7];
+    return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5, 
+            python_question_6, python_question_7, python_question_8, python_question_9];
 };
 
