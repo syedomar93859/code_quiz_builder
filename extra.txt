@@ -1,5 +1,5 @@
 Things to implement:
-Score system
+Improve score system
 Explanation
 Better question layout
 More interactive questions 
@@ -10,6 +10,7 @@ rename this project because code_practice is not a good name
 questions with multiple answers
 select multiple options quetion
 better messages when getting wrong answer
+create and add website icon
 
 create question about *p being a pointer in c
 explain address in c like &x which is the address of variable x when it was intialized before

@@ -133,7 +133,26 @@ let python_question_9 = {
     answer: 'x, y = 9, 13',
 };
 
+let python_question_10 = {
+    language: 'Python',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'What happens with the code below in Python: <br> x = 5 <br> y = "John" <br> print(x + y)',
+    options: [
+        '5John' ,
+        '5 John',
+        'Error shows up',
+        'Nothing happens', 
 
+    ],
+    solution: 'Error shows up',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
 
 
 
@@ -141,6 +160,6 @@ let python_question_9 = {
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
     return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5, 
-            python_question_6, python_question_7, python_question_8, python_question_9];
+            python_question_6, python_question_7, python_question_8, python_question_9, python_question_10];
 };
 
