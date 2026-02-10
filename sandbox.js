@@ -6,6 +6,8 @@ const selectedLanguages = new Set();
 
 const quizQuestions = new Set();
 
+const seenQuestions = new Set();
+
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -41,27 +43,35 @@ function totalQuestions() {
     return Number(numQuestions);
 }
 
+function addQuestions(questions){
+    questions.forEach(q => {
+        if (!seenQuestions.has(q.question)){
+            quizQuestions.add(q);
+            seenQuestions.add(q.question);
+        }
+    })
+}
+
+
 function quizCreator() {
     quizQuestions.clear();
+    seenQuestions.clear();
+
     console.log("Creating quiz...");
     if (selectedLanguages.has('Python')) {
-        const pythonQuestions = python_question_generator();
-        for (let i = 0; i < pythonQuestions.length; i++) {
-            quizQuestions.add(pythonQuestions[i]);
-        }
+        addQuestions(python_question_generator());
     }
+    console.log(`Current Number of Questions After Adding Python Questons: ${quizQuestions.size}`);
+
     if (selectedLanguages.has('Java')) {
-        const javaQuestions = java_question_generator();
-        for (let i = 0; i < javaQuestions.length; i++) {
-            quizQuestions.add(javaQuestions[i]);
-        }
+        addQuestions(java_question_generator());
     }
+    console.log(`Current Number of Questions After Adding Java Questions: ${quizQuestions.size}`);
+
     if (selectedLanguages.has('C')) {
-        const cQuestions = c_question_generator();
-        for (let i = 0; i < cQuestions.length; i++) {
-            quizQuestions.add(cQuestions[i]);
-        }
+        addQuestions(c_question_generator());
     }
+    console.log(`Current Number of Questions After Adding C Questions: ${quizQuestions.size}`);
 
     let questionsArray = Array.from(quizQuestions);
     shuffleArray(questionsArray);
@@ -71,7 +81,7 @@ function quizCreator() {
 
     const numQuestions = totalQuestions();
 
-    console.log([...selectedLanguages]);
+    console.log("Here are languages that were selected: " + [...selectedLanguages]);
 
     const finalQuestions = questionsArray.slice(0, numQuestions);
 

@@ -158,7 +158,7 @@ let python_question_10 = {
 
 
 export function python_question_generator(){
-    console.log(`Programming Language: Python`);
+    console.log(`The Python option has been chosen.`);
     return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5, 
             python_question_6, python_question_7, python_question_8, python_question_9, python_question_10];
 };

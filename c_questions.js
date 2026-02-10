@@ -206,6 +206,6 @@ let c_question_10 = {
 
 
 export function c_question_generator(){
-    console.log(`Programming Language: C`);
+    console.log(`The C option has been chosen.`);
     return [c_question_1, c_question_2, c_question_3, c_question_4, c_question_5, c_question_6, c_question_7, c_question_8, c_question_9, c_question_10];
 };

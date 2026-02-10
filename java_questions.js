@@ -49,6 +49,6 @@ let java_question_3 = {
 };
 
 export function java_question_generator(){
-    console.log(`Programming Language: Java`);
+    console.log(`The Java option has been chosen.`);
     return [java_question_1, java_question_2, java_question_3];
 };
