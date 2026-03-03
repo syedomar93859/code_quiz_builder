@@ -140,3 +140,28 @@ input[type="number"]:focus{
   border: 1px dashed #d1d5db;
   min-height: 120px;
 }
+/* Input boxes */
+.answer-input {
+  width: 70%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db; /* thin as possible */
+  outline: none;
+  margin-bottom: 15px; /* Space */
+  margin-right:10px; /* This gives it space inbetween input and submit.*/
+}
+.quiz p { /*This makes it apply to every element thats inside an element in the quiz class */
+  line-height: 2.0; /* This is the space inbetween the text's */
+  max-width: 700px;
+  margin-bottom:20px;/* Space below the question.*/
+  border-top: 2px solid #e5e7eb; /* Border inbtwn questions*/
+  padding-top: 20px;
+
+}
+/* Reduces space */
+.quiz h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+

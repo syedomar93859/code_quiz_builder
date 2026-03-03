@@ -116,11 +116,12 @@ function quizCreator() {
             });
 
 
-             question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${letteredChoices.join('<br>')} <br> Tries Left: ${totalTries - currTries}`;
+            question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
+
 
 
         } else if (q.type === 'Written') {
-            question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
+            question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</h3> ${q.question} <br> <em>Tries Left:${totalTries - currTries}</em>`;
         }
 
         const answerInput = document.createElement('input');
@@ -144,9 +145,9 @@ function quizCreator() {
                 currTries++;
 
                 if (q.type === 'Multiple Choice'){
-                    question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${letteredChoices.join('<br>')} <br> Tries Left: ${totalTries - currTries}`;
+                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }else if(q.type === 'Written'){
-                    question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Tries Left: ${totalTries - currTries}`;
+                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }
 
                 const solution = document.createElement('p');
@@ -163,9 +164,9 @@ function quizCreator() {
                 alert(`Out of tries!`);
 
                 if (q.type === 'Multiple Choice'){
-                    question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${letteredChoices.join('<br>')} <br> Tries Left: 0`;
+                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: 0</em>`;
                 } else if (q.type === 'Written') {
-                    question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: 0`;
+                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: 0</em>`;
                 }
 
                 submitButton.disabled = true;
@@ -188,9 +189,9 @@ function quizCreator() {
                 console.log(currTries);
 
                 if (q.type === 'Multiple Choice'){
-                    question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${letteredChoices.join('<br>')} <br> Tries Left: ${totalTries - currTries}`;
+                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 } else if (q.type === 'Written') {
-                    question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
+                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }
 
             }
