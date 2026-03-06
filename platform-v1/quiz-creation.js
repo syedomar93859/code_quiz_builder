@@ -156,7 +156,7 @@ function quizCreator() {
                     question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }
 
-                const solution = document.createElement('p');
+                const solution = document.createElement('div'); /* Changed to division as <p> made it look weird*/
                 if (q.type === 'Multiple Choice'){
                     solution.innerHTML = `Solution: ${correctChoice}. ${q.solution}`;
                 } else if (q.type === 'Written') {
@@ -185,7 +185,7 @@ function quizCreator() {
 
                 submitButton.disabled = true;
 
-                const solution = document.createElement('p');
+                const solution = document.createElement('div'); /* Changed to division as <p> made it look weird*/
 
                 if (q.type === 'Multiple Choice'){
                     solution.innerHTML = `Solution: ${correctChoice}. ${q.solution}`;
