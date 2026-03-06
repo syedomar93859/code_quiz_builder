@@ -154,12 +154,41 @@ let python_question_10 = {
     },
 };
 
+let python_question_11 = {
+    language: 'Python',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'What does range(3) return?',
+    options: [
+        '0,1,2' ,
+        '1,2,3',
+        '0,1,2,3',
+        '1,2', 
+
+    ],
+    solution: '0,1,2',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
+let python_question_12 = {
+    language: 'Python',
+    type: 'Written',
+    difficulty: 'Easy',
+    question: 'How do you get the length of a list called my_list?',
+    answer: 'len(my_list)',
+};
+
 
 
 
 export function python_question_generator(){
     console.log(`The Python option has been chosen.`);
     return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5, 
-            python_question_6, python_question_7, python_question_8, python_question_9, python_question_10];
+            python_question_6, python_question_7, python_question_8, python_question_9, python_question_10,python_question_11,python_question_12];
 };
 

@@ -140,6 +140,12 @@ function quizCreator() {
             const userAnswer = answerInput.value;
             if (userAnswer === q.answer || userAnswer === correctChoice) {
                 alert('Correct!');
+                submitButton.style.backgroundColor = 'green'; /* This is to make things green when answer is right.*/
+                submitButton.style.color = 'white'; /* This is to make the word insdie the box white */
+                submitButton.innerHTML = 'Correct!'; /* the word itself */
+
+                answerInput.style.backgroundColor = '#ecfdf5'; /* THis is for the input boxes, and make it green*/
+                answerInput.style.borderColor = 'green';
                 submitButton.disabled = true;
 
                 currTries++;
@@ -162,6 +168,14 @@ function quizCreator() {
             } else if(totalTries === currTries + 1){
                 fullMarks -= (1/totalTries);
                 alert(`Out of tries!`);
+
+                submitButton.style.backgroundColor = 'red'; /* This is to make the button red when user is out of tries.*/
+                submitButton.style.color = 'white'; /* This is to make the word insdie the box white */
+                submitButton.innerHTML = 'Wrong!'; /* the word itself */
+
+                answerInput.style.backgroundColor = '#fef2f2'; /* THis is for the input boxes, and make it red*/
+                answerInput.style.borderColor = 'red';
+                submitButton.disabled = true;
 
                 if (q.type === 'Multiple Choice'){
                     question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: 0</em>`;
