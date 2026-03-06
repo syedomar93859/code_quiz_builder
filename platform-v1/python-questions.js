@@ -89,8 +89,8 @@ let python_question_7 = {
     difficulty: 'Easy',
     question: 'What happins with the code below in Python: <br> d = 7 <br> D = "Silly',
     options: [
-        "A will overwrite a",
-        "a will overwrite A",
+        "D will overwrite d",
+        "d will overwrite D",
         "Neither variable will be overwritten",
         "Error shows up",
     ],
