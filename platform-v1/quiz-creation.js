@@ -138,7 +138,7 @@ function quizCreator() {
         submitButton.onclick = () => {
             let mark = 0;
             const userAnswer = answerInput.value;
-            if (userAnswer === q.answer || userAnswer === correctChoice) {
+            if (userAnswer === q.answer || userAnswer.toUpperCase() === correctChoice) {
                 alert('Correct!');
                 submitButton.style.backgroundColor = 'green'; /* This is to make things green when answer is right.*/
                 submitButton.style.color = 'white'; /* This is to make the word insdie the box white */
