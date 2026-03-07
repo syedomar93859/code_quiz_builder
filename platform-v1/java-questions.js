@@ -19,9 +19,9 @@ let java_question_2 = {
     ],
     solution: 'It indicates that a method does not return a value.',
     randomize: function() {
-    for (let i = this.options.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
         }
     },
 
@@ -40,15 +40,23 @@ let java_question_3 = {
     ],
     solution: 'It means the method can be accessed without creating an instance/object of the class.',
     randomize: function() {
-    for (let i = this.options.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
         }
     },
 
 };
 
-export function java_question_generator(){
+for (let i = 0; i < questions.length; i++) {
+    questions[i].number = `Q${i + 1})`;
+
+    if (questions[i].randomize) {
+        questions[i].randomize();
+    }
+}
+
+export function java_question_generator() {
     console.log(`The Java option has been chosen.`);
     return [java_question_1, java_question_2, java_question_3];
 };
