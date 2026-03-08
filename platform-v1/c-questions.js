@@ -1,8 +1,22 @@
+/*
+This file contains all questions about the C programming language. Some number of these questions are displayed in the website
+if the user choose to be tested in the C programming language and the number of questions to be displayed picked is greater than 0.
+*/
+
 let c_question_1 = {
+    // the languages for all the questions in this file including this one have been specified to be C
     language: 'C',
+    
+    // the type of the question lets us know if the question is a written question or a multiple choice question
     type: 'Written',
+    
+    // each question has their own level of challenge that ranges from Easy to Hard
     difficulty: 'Easy',
+    
+    // this attribute tells us what the full question is
     question: 'How to print "Hello, World!" in C?',
+    
+    // printf("Hello, World!"); is the answer for this question which means the user must input this as their answer to get it correct
     answer: 'printf("Hello, World!");',
 };
 
@@ -11,13 +25,19 @@ let c_question_2 = {
     type: 'Multiple Choice',
     difficulty: 'Easy',
     question: 'What does the following declaration mean in C: const int *p;',
+
+    // as this question is multiple choice, a list of possible answers are displayed to user with this options array, and they have to pick the correct one
     options: [
         'p is a pointer to a constant integer.',
         'p is a constant pointer to an integer.',
         'Both p and the integer are constant.',
         'The integer pointed to by p can be modified.'
     ],
+
+    // this the correct answer for this multiple choice questio
     solution: 'p is a pointer to a constant integer.',
+
+    // this function takes the options array and randomizes the order of its elements, so they don't show up in the same order everytime when displayed
     randomize: function() {
         for (let i = this.options.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -204,8 +224,13 @@ let c_question_10 = {
 
 
 
-
+// this function stores all the C questions in an array and returns this array when called in the quiz-creation.js file.
 export function c_question_generator(){
+    
+    // lets anyone using the console know, that the user chose the button to be tested on C questions
     console.log(`The C option has been chosen.`);
-    return [c_question_1, c_question_2, c_question_3, c_question_4, c_question_5, c_question_6, c_question_7, c_question_8, c_question_9, c_question_10];
+    
+    // returns an array filled with C questions
+    return [c_question_1, c_question_2, c_question_3, c_question_4, c_question_5, c_question_6, 
+            c_question_7, c_question_8, c_question_9, c_question_10];
 };
