@@ -16,8 +16,6 @@ Syed Omar
 
 Jashan Bhinder
 
-Muhtasim Ishmam
-
 Tomi Oteniya
 
 
