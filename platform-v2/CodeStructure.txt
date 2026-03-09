@@ -1,0 +1,30 @@
+platform-v2/
+│
+├── index.html
+├── styles.css
+├── app.js
+│
+├── data/
+│   ├── questions.json
+│   └── sample-questions.json
+│
+├── core/
+│   ├── question-bank.js
+│   ├── quiz-engine.js
+│   ├── validator.js
+│   ├── scorer.js
+│   └── utils.js
+│
+├── ui/
+│   ├── render-home.js
+│   ├── render-quiz.js
+│   ├── render-results.js
+│   └── render-builder.js
+│
+└── features/
+    ├── quiz/
+    │   ├── quiz-controller.js
+    │   └── quiz-state.js
+    └── builder/
+        ├── builder-controller.js
+        └── builder-state.js

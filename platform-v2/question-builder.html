@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Question Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page builder-page">
+    <header class="builder-header">
+      <div>
+        <h1>Question Builder</h1>
+        <p>Create written and multiple choice programming questions for your quiz app.</p>
+      </div>
+
+      <div class="builder-header-actions">
+        <a href="main.html" class="link-button">Back to Quiz</a>
+      </div>
+    </header>
+
+    <main class="builder-layout">
+      <section class="builder-card form-card">
+        <div class="section-heading">
+          <h2>Create a Question</h2>
+          <p>Fill out the form and save it into the local question database.</p>
+        </div>
+
+        <form id="questionForm" class="builder-form">
+          <div class="form-row two-column">
+            <div class="field">
+              <label for="language">Language</label>
+              <select id="language" required>
+                <option value="">Select language</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C">C</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="questionType">Question Type</label>
+              <select id="questionType" required>
+                <option value="Written">Written</option>
+                <option value="Multiple Choice">Multiple Choice</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="questionText">Question</label>
+            <textarea
+              id="questionText"
+              rows="5"
+              placeholder="Write the full question here..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <label for="hintText">Hint</label>
+            <textarea
+              id="hintText"
+              rows="3"
+              placeholder="Write a hint for the user..."
+            ></textarea>
+          </div>
+
+          <div class="field" id="writtenAnswerField">
+            <label for="answerText">Correct Answer</label>
+            <textarea
+              id="answerText"
+              rows="3"
+              placeholder="Write the correct written answer..."
+            ></textarea>
+          </div>
+
+          <section id="multipleChoiceSection" class="mcq-block">
+            <div class="mcq-header">
+              <div>
+                <h3>Multiple Choice Options</h3>
+                <p>Add the answer choices and mark which one is correct.</p>
+              </div>
+              <button type="button" id="addOptionBtn">Add Option</button>
+            </div>
+
+            <div id="optionsContainer" class="options-container">
+              <div class="option-item">
+                <input type="radio" name="correctOption" value="0" checked />
+                <input type="text" class="option-input" placeholder="Option 1" />
+                <button type="button" class="remove-option-btn">Remove</button>
+              </div>
+
+              <div class="option-item">
+                <input type="radio" name="correctOption" value="1" />
+                <input type="text" class="option-input" placeholder="Option 2" />
+                <button type="button" class="remove-option-btn">Remove</button>
+              </div>
+
+              <div class="option-item">
+                <input type="radio" name="correctOption" value="2" />
+                <input type="text" class="option-input" placeholder="Option 3" />
+                <button type="button" class="remove-option-btn">Remove</button>
+              </div>
+
+              <div class="option-item">
+                <input type="radio" name="correctOption" value="3" />
+                <input type="text" class="option-input" placeholder="Option 4" />
+                <button type="button" class="remove-option-btn">Remove</button>
+              </div>
+            </div>
+          </section>
+
+          <div class="form-actions">
+            <button type="button" id="previewBtn" class="secondary-button">Preview</button>
+            <button type="reset" class="secondary-button">Clear</button>
+            <button type="submit" class="primary-button">Save Question</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="builder-sidebar">
+        <section class="builder-card preview-card">
+          <div class="section-heading">
+            <h2>Preview</h2>
+            <p>This is how the question will look before saving.</p>
+          </div>
+
+          <div id="previewOutput" class="preview-output empty-state">
+            <p>No preview yet.</p>
+          </div>
+        </section>
+
+        <section class="builder-card saved-card">
+          <div class="section-heading">
+            <h2>Saved Questions</h2>
+            <p>Questions saved locally can be reused by the main quiz UI later.</p>
+          </div>
+
+          <div class="saved-toolbar">
+            <input
+              type="text"
+              id="searchSavedQuestions"
+              placeholder="Search saved questions..."
+            />
+            <button type="button" id="clearSavedQuestions" class="secondary-button">
+              Clear All
+            </button>
+          </div>
+
+          <div id="savedQuestionsList" class="saved-questions-list empty-state">
+            <p>No saved questions yet.</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="question-builder.js"></script>
+</body>
+</html>
