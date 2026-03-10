@@ -1,2 +1,5 @@
 Here are the resources used for platform-v1:
 https://www.w3schools.com/css/default.asp
+
+Here are the resources used for platform-v2:
+https://www.youtube.com/watch?v=IBgWKTaG_Bs

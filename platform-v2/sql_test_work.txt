@@ -56,16 +56,19 @@
 
 -- DROP TABLE USERS;
 
-CREATE TABLE QUESTIONS (
-    id TEXT NOT NULL PRIMARY KEY, 
-    language TEXT NOT NULL, 
-    type TEXT NOT NULL,
-    difficulty TEXT NOT NULL,
-    prompt TEXT NOT NULL,
-    options TEXT NOT NULL,
-    answerConfig TEXT NOT NULL,
-    tags TEXT NOT NULL
-);
+-- DROP TABLE questions;
+
+-- CREATE TABLE QUESTIONS (
+--     id TEXT NOT NULL PRIMARY KEY, 
+--     language TEXT NOT NULL, 
+--     type TEXT NOT NULL,
+--     difficulty TEXT NOT NULL,
+--     prompt TEXT NOT NULL,
+--     options TEXT NOT NULL,
+--     answerConfig TEXT NOT NULL,
+--     tags TEXT NOT NULL
+-- );
+
 
 -- {
 -- id:"c-010",
