@@ -11,6 +11,11 @@ platform-v2: A folder prepared to contain code and files of version 2 of this pr
 
 scratch: This folder holds code and logic snippets used for testing ideas, and is not used directly for the CQB.
 
+## Setup
+Run this command in terminal to install the right dependencies for the code to work:
+
+npm install
+
 ## Contributors
 Syed Omar
 
