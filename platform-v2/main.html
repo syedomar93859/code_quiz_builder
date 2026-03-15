@@ -1,0 +1,103 @@
+<!-- Declaration that tells the browser this document uses HTML5 -->
+<!DOCTYPE html>
+
+<!-- Root element of the webpage. Everything inside belongs to the HTML document -->
+<!-- lang="en" tells browsers and screen readers the language is English -->
+<html lang="en">
+
+<!-- The head section contains metadata (information about the page) -->
+<!-- This content is not displayed directly on the webpage -->
+<head>
+
+    <!-- Specifies the character encoding used by the document -->
+    <!-- UTF-8 supports characters from most languages -->
+    <meta charset="UTF-8">
+
+    <!-- Controls how the page behaves on different screen sizes -->
+    <!-- Important for responsive design on phones, tablets, and desktops -->
+    <!-- width=device-width makes the page match the device's screen width -->
+    <!-- initial-scale=1.0 ensures the page is not zoomed when first loaded -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Helps older versions of Internet Explorer render the page correctly -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Links the external CSS file used to style the page -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Title displayed in the browser tab -->
+    <title>Code Quiz Creator</title>
+
+    <!-- Favicon shown in the browser tab -->
+    <!-- ../ means go up one folder (because main.html is inside Platform V1) -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+
+<body>
+
+  <!-- Main container that wraps the entire page -->
+  <div class="page">
+
+    <!-- Main heading of the page -->
+    <h1>Quiz Creator For Programming Practice</h1>
+
+    <!-- Short description explaining the purpose of the page -->
+    <p>This is a tool to help you create quizzes for programming practice.</p>
+
+    <!-- Section containing language selection buttons -->
+    <div class="language-selection">
+
+      <!-- When clicked, toggleLanguage() is called -->
+      <!-- data-language stores the language associated with the button -->
+      <button onclick="toggleLanguage(this)" data-language="Python">Python</button>
+      <button onclick="toggleLanguage(this)" data-language="Java">Java</button>
+      <button onclick="toggleLanguage(this)" data-language="C">C</button>
+
+    </div>
+
+    <!-- Section that contains quiz configuration controls -->
+    <div class="section">
+
+      <div class="controls">
+
+        <!-- Section that allows the user to choose quiz settings -->
+        <div class="tries-selection">
+
+          <!-- Label and input for selecting number of tries per question -->
+          <label class="label" for="triesPerQuestion">How many tries per question?</label>
+
+          <!-- Numeric input with minimum and maximum allowed values -->
+          <input type="number" id="triesPerQuestion" min="1" max="10" step="1" value="3">
+
+          <!-- Label and input for selecting total number of quiz questions -->
+          <label class="label" for="numberOfQuestions">How many questions?</label>
+
+          <!-- Maximum set to 50 so users can request larger quizzes -->
+          <input type="number" id="numberOfQuestions" min="1" max="50" step="1" value="10">
+
+        </div>
+
+        <!-- Section containing the button that generates the quiz -->
+        <div class="quiz-creation">
+
+          <!-- Clicking this button runs the quizCreator() function in JavaScript -->
+          <button onclick="quizCreator()">Create Quiz</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Container where quiz questions will be dynamically inserted -->
+    <!-- JavaScript will create elements inside this div -->
+    <div class="quiz"></div>
+
+    <!-- Loads the JavaScript module responsible for quiz creation -->
+    <!-- type="module" allows ES6 imports to be used -->
+    <script type="module" src="quiz-creation.js"></script>
+
+  </div>
+
+</body>
+</html>
