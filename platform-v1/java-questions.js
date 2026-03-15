@@ -76,12 +76,128 @@ let java_question_3 = {
 //     }
 // }
 
+let java_question_4 = {
+    language: 'Java',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'Which data type is used to store a single character in Java?',
+    options: [
+        'char',
+        'String',
+        'int',
+        'byte'
+    ],
+    solution: 'char',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
+let java_question_5 = {
+    language: 'Java',
+    type: 'Written',
+    difficulty: 'Easy',
+    question: 'What keyword is used to create a new object in Java?',
+    answer: 'new',
+};
+
+let java_question_6 = {
+    language: 'Java',
+    type: 'Multiple Choice',
+    difficulty: 'Medium',
+    question: 'What is the default value of an int variable in Java?',
+    options: [
+        '0',
+        'null',
+        '1',
+        'undefined'
+    ],
+    solution: '0',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
+let java_question_7 = {
+    language: 'Java',
+    type: 'Multiple Choice',
+    difficulty: 'Medium',
+    question: 'Which of the following is NOT a valid access modifier in Java?',
+    options: [
+        'friend',
+        'public',
+        'private',
+        'protected'
+    ],
+    solution: 'friend',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
+let java_question_8 = {
+    language: 'Java',
+    type: 'Written',
+    difficulty: 'Medium',
+    question: 'What keyword is used to inherit a class in Java?',
+    answer: 'extends',
+};
+
+let java_question_9 = {
+    language: 'Java',
+    type: 'Multiple Choice',
+    difficulty: 'Medium',
+    question: 'What does the "final" keyword do when applied to a variable in Java?',
+    options: [
+        'It makes the variable a constant that cannot be changed.',
+        'It makes the variable accessible from any class.',
+        'It deletes the variable after use.',
+        'It makes the variable only accessible within the method.'
+    ],
+    solution: 'It makes the variable a constant that cannot be changed.',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
+let java_question_10 = {
+    language: 'Java',
+    type: 'Multiple Choice',
+    difficulty: 'Hard',
+    question: 'Which collection class in Java does NOT allow duplicate elements?',
+    options: [
+        'HashSet',
+        'ArrayList',
+        'LinkedList',
+        'Vector'
+    ],
+    solution: 'HashSet',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
 // this function stores all the Java questions in an array and returns this array when called in the quiz-creation.js file.
 export function java_question_generator() {
-    
+
     // lets anyone using the console know, that the user chose the button to be tested on Java questions
     console.log(`The Java option has been chosen.`);
 
     // returns an array filled with Java questions
-    return [java_question_1, java_question_2, java_question_3];
+    return [java_question_1, java_question_2, java_question_3, java_question_4, java_question_5, java_question_6, java_question_7, java_question_8, java_question_9, java_question_10];
 };
