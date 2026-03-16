@@ -208,7 +208,7 @@ function quizCreator() {
             // Display question and choices
             question.innerHTML =
             `<h3>Program Language: ${q.language}
-            <br><small>Question Type: ${q.type}</small></h3>
+            <br>Question Type: ${q.type}</h3>
             ${q.question}
             <br> ${letteredChoices.join('<br>')}
             <br> <em>Tries Left: ${totalTries - currTries}</em>`;
@@ -221,9 +221,9 @@ function quizCreator() {
 
             question.innerHTML =
             `<h3>Program Language: ${q.language}
-            <br><small>Question Type: ${q.type}</h3>
+            <br>Question Type: ${q.type}</h3>
             ${q.question}
-            <br> <em>Tries Left:${totalTries - currTries}</em>`;
+            <br> <em>Tries Left: ${totalTries - currTries}</em>`;
         }
 
 

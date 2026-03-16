@@ -107,7 +107,7 @@ let python_question_7 = {
     language: 'Python',
     type: 'Multiple Choice',
     difficulty: 'Easy',
-    question: 'What happins with the code below in Python: <br> d = 7 <br> D = "Silly',
+    question: 'What happins with the code below in Python: <br> d = 7 <br> D = "Silly"',
     options: [
         "D will overwrite d",
         "d will overwrite D",

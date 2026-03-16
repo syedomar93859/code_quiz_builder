@@ -189,7 +189,6 @@ let c_question_9 = {
         'continue',
         'return',
         'exit',
-        'exit',
     ],
     solution: 'break',
     randomize: function() {
@@ -207,7 +206,7 @@ let c_question_10 = {
     difficulty: 'Easy',
     question: 'Which loop is guaranteed to execute at least once in C?',
     options: [
-        'do-while loop"',
+        'do-while loop',
         'while loop',
         'for loop',
         'if statement',
