@@ -16,6 +16,11 @@ Run this command in terminal to install the right dependencies for the code to w
 
 npm install
 
+If you want to open the website in platform-v2, execute the command below. You should get the link:
+
+node question-builder.js
+
+
 ## Contributors
 Syed Omar
 
