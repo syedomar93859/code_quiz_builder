@@ -169,7 +169,9 @@ function quizCreator() {
 
 
     // Create HTML elements for each question
-    finalQuestions.forEach(q => {
+    finalQuestions.forEach((q, qIndex) => {
+
+        const qNum = qIndex + 1;
 
         let letteredChoices = [];
 
@@ -207,20 +209,20 @@ function quizCreator() {
 
             // Display question and choices
             question.innerHTML =
-            `<h3>Program Language: ${q.language}
+            `<h3>Q${qNum}) Program Language: ${q.language}
             <br>Question Type: ${q.type}</h3>
             ${q.question}
             <br> ${letteredChoices.join('<br>')}
             <br> <em>Tries Left: ${totalTries - currTries}</em>`;
 
 
-        } 
-        
+        }
+
         // WRITTEN QUESTION HANDLING
         else if (q.type === 'Written') {
 
             question.innerHTML =
-            `<h3>Program Language: ${q.language}
+            `<h3>Q${qNum}) Program Language: ${q.language}
             <br>Question Type: ${q.type}</h3>
             ${q.question}
             <br> <em>Tries Left: ${totalTries - currTries}</em>`;
@@ -260,9 +262,9 @@ function quizCreator() {
                 currTries++;
 
                 if (q.type === 'Multiple Choice'){
-                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
+                    question.innerHTML = `<h3>Q${qNum}) Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }else if(q.type === 'Written'){
-                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
+                    question.innerHTML = `<h3>Q${qNum}) Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }
 
                 const solution = document.createElement('div'); /* Changed to division as <p> made it look weird*/
@@ -287,9 +289,9 @@ function quizCreator() {
                 submitButton.disabled = true;
 
                 if (q.type === 'Multiple Choice'){
-                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: 0</em>`;
+                    question.innerHTML = `<h3>Q${qNum}) Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: 0</em>`;
                 } else if (q.type === 'Written') {
-                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: 0</em>`;
+                    question.innerHTML = `<h3>Q${qNum}) Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: 0</em>`;
                 }
 
                 submitButton.disabled = true;
@@ -312,9 +314,9 @@ function quizCreator() {
                 console.log(currTries);
 
                 if (q.type === 'Multiple Choice'){
-                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
+                    question.innerHTML = `<h3>Q${qNum}) Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> ${letteredChoices.join('<br>')} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 } else if (q.type === 'Written') {
-                    question.innerHTML = `<h3>Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
+                    question.innerHTML = `<h3>Q${qNum}) Program Language: ${q.language}  <br><small>Question Type: ${q.type}</small></h3> ${q.question} <br> <em>Tries Left: ${totalTries - currTries}</em>`;
                 }
 
             }
