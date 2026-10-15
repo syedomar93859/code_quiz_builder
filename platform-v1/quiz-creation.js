@@ -113,7 +113,7 @@ function quizCreator() {
     console.log("Creating quiz...");
 
     // Add Python questions if Python was selected
-    if (selectedLanguages.has('Python')) {
+    if (selectedLanguages.has('Computing Machinery')) {
         addQuestions(python_question_generator());
     }
 
@@ -269,9 +269,9 @@ function quizCreator() {
 
                 const solution = document.createElement('div'); /* Changed to division as <p> made it look weird*/
                 if (q.type === 'Multiple Choice'){
-                    solution.innerHTML = `Solution: ${correctChoice}. ${q.solution}`;
+                    solution.innerHTML = `Solution: ${correctChoice}. ${q.solution} <h3> Explanation: ${q.explanation}`;
                 } else if (q.type === 'Written') {
-                    solution.innerHTML = `Solution: ${q.answer}`;
+                    solution.innerHTML = `Solution: ${q.answer} <h3> Explanation: ${q.explanation}`;
                 }
 
                 submitButton.insertAdjacentElement('afterend', solution);
@@ -299,9 +299,9 @@ function quizCreator() {
                 const solution = document.createElement('div'); /* Changed to division as <p> made it look weird*/
 
                 if (q.type === 'Multiple Choice'){
-                    solution.innerHTML = `Solution: ${correctChoice}. ${q.solution}`;
+                    solution.innerHTML = `Solution: ${correctChoice}. ${q.solution} <h3> Explanation: ${q.explanation}`;
                 } else if (q.type === 'Written') {
-                    solution.innerHTML = `Solution: ${q.answer}`;
+                    solution.innerHTML = `Solution: ${q.answer} <h3> Explanation: ${q.explanation}`;
                 }
 
                 submitButton.insertAdjacentElement('afterend', solution);
