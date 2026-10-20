@@ -1,0 +1,65 @@
+Questions have:
+1. id: An identifier for each question
+2. Language: Java, Python, JavaScript, C++, etc
+3. Type: Multiple Choice, Written, Matching
+4. Difficulty: Easy, Medium, Hard
+5. Question: The actual question
+6. Options:
+    a. If multiple choice or matching, there are a list of possible solutions
+    b. If written, there is only one possible answer
+7. Solution: The answer to the question
+8. Tags: Is this an internship kind of question or something like that
+
+language: 'Java',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'What does the static keyword mean for a method in Java?',
+    options: [
+        'It means the method can be accessed without creating an instance/object of the class.',
+        'It means the method cannot be accessed without creating an instance/object of the class.',
+        'It means the method is accessible by any other method in the same class.',
+        'Makes the method belong to the class rather than any object instance.'
+    ],
+    solution: 'It means the method can be accessed without creating an instance/object of the class.',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+
+
+
+
+
+-- CREATE TABLE Persons (
+--   PersonID int PRIMARY KEY,
+--   LastName varchar(255) NOT NULL,
+--   FirstName varchar(255),
+--   Address varchar(255),
+--   City varchar(255)
+-- );
+
+-- DROP TABLE Persons
+
+
+-- CREATE TABLE IF NOT EXISTS questions (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     lang VARCHAR(50) NOT NULL,
+--     kind VARCHAR(50) NOT NULL,
+--     difficulty VARCHAR(20) NOT NULL,
+--     question TEXT NOT NULL,
+--     options TABLE,
+--     solution JSON NOT NULL,
+--     tags JSON
+-- );
+
+
+-- CREATE TABLE options (
+--   one TEXT NOT NULL,
+--   two TEXT NOT NULL,
+--   three TEXT,
+--   four TEXT,
+--   five TEXT
+
+-- );
